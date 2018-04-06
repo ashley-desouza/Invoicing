@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "server": "nodemon index.js --ignore client"
+    "client": "npm run start --prefix ../client",
+    "server": "nodemon index.js",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "repository": {
     "type": "git",
@@ -19,6 +21,7 @@
   "homepage": "https://github.com/ashley-desouza/Invoicing#readme",
   "dependencies": {
     "body-parser": "^1.18.2",
+    "concurrently": "^3.5.1",
     "express": "^4.16.3",
     "mongoose": "^5.0.13",
     "morgan": "^1.9.0"
