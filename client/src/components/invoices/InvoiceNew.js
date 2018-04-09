@@ -1,8 +1,18 @@
+/*******************************************************************
+ Import the React and React-Redux modules
+********************************************************************/
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
+/*******************************************************************
+ Import the Action Creators
+********************************************************************/
 import * as actions from './../../actions';
 
+/*******************************************************************
+ Import the InvoiceList Component - Used to really display the 
+ Invoice Form
+********************************************************************/
 import InvoiceForm from './InvoiceForm';
 
 class InvoiceNew extends Component {

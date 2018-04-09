@@ -1,3 +1,7 @@
+/*******************************************************************
+ Import the React and React-Router-DOM modules along with the
+ Date Picker Module
+********************************************************************/
 import 'react-dates/initialize';
 import React, { Component } from 'react';
 import { SingleDatePicker } from 'react-dates';
@@ -9,6 +13,7 @@ class InvoiceForm extends Component {
   constructor(props) {
     super(props);
 
+    // Define Initial Component State
     this.state = {
       name: '',
       email: '',
@@ -32,6 +37,10 @@ class InvoiceForm extends Component {
     this.addLineItem = this.addLineItem.bind(this);
   }
 
+  /*******************************************************************
+   Render the Line Item elements for each Invoice as they are
+   entered by the User
+  ********************************************************************/
   renderLineItems() {
     if (this.state.lineItems.length) {
       return this.state.lineItems.map(({ description, amount }, idx) => {
@@ -61,6 +70,10 @@ class InvoiceForm extends Component {
     }
   }
 
+  /*******************************************************************
+    Method to update the lineItems Component State when a new
+    Line Item is entered
+  ********************************************************************/
   addLineItem() {
     if (!this.state.description) {
       // The Description Field is not filled
@@ -103,6 +116,9 @@ class InvoiceForm extends Component {
     }
   }
 
+  /*******************************************************************
+   Method to calculate the Invoice Total
+  ********************************************************************/
   computeInvoiceTotal() {
     this.setState((prevState) => {
       return {
@@ -111,6 +127,9 @@ class InvoiceForm extends Component {
     });
   }
 
+  /*******************************************************************
+   Validation Methods
+  ********************************************************************/
   onNameChange = (e) => {
     this.setState({
       name: e.target.value
@@ -137,8 +156,6 @@ class InvoiceForm extends Component {
       // and has an optional 2-digit decimal part
       // For Example - 123 and 123.45 are valid and 123.4343 is not valid
       this.setState(() => ({ amount }));
-
-      // this.computeInvoiceTotal();
     }
   }
 
@@ -154,6 +171,9 @@ class InvoiceForm extends Component {
     this.setState({ calendarFocused: focused });
   };
 
+  /*******************************************************************
+   Method to handle Form Submission
+  ********************************************************************/
   onSubmit = (e) => {
     // Prevent Default browser action for form submission
     e.preventDefault();
@@ -208,11 +228,13 @@ class InvoiceForm extends Component {
           })
         }
       }, () => {
+        // Calculate the final Invoice Total
         return this.setState((prevState) => {
           return {
             totalAmount: prevState.totalAmount + parseFloat(prevState.amount, 10)
           }
         }, () => {
+          // Submit the Form
           return this.props.onSubmit({
             name: this.state.name,
             email: this.state.email,

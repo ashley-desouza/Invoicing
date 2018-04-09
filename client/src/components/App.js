@@ -1,8 +1,19 @@
+/*******************************************************************
+ Import the React, React-Router-DOM and React-Redux modules
+********************************************************************/
 import React, { Component } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { connect } from 'react-redux';
+
+/*******************************************************************
+ Import the Action Creators
+********************************************************************/
 import * as actions from '../actions';
 
+/*******************************************************************
+ Import the Components that will be part of the App Route Matching
+ Components
+********************************************************************/
 import Header from './Header';
 import Home from './Home';
 import Dashboard from './Dashboard';

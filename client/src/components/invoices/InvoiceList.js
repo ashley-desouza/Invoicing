@@ -1,5 +1,12 @@
+/*******************************************************************
+ Import the React and React-Redux modules
+********************************************************************/
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+
+/*******************************************************************
+ Import the Action Creators
+********************************************************************/
 import { fetchInvoices } from './../../actions';
 
 class InvoiceList extends Component {
@@ -7,7 +14,9 @@ class InvoiceList extends Component {
     // Fetch the List of Invoices for the Logged in User
     this.props.fetchInvoices();
   }
-
+  /*******************************************************************
+   Render the Line Item elements for each Invoice
+  ********************************************************************/
   renderLineItems(invoiceLineItems) {
     if (invoiceLineItems && invoiceLineItems.length) {
       return invoiceLineItems.map(({ _id, description, amount }) => {
@@ -22,11 +31,14 @@ class InvoiceList extends Component {
     }
   }
 
+  /*******************************************************************
+   Render the Invoices returned from the server
+  ********************************************************************/
   renderInvoices() {
     // Sort the Invoice to display the one with nearest Due Date first
-    this.props.invoices.sort((a, b) => a.dueDate < b.dueDate ? 1 : -1);
+    this.props.invoices.sort((a, b) => a.dueDate > b.dueDate ? 1 : -1);
 
-    return this.props.invoices.reverse().map(invoice => {
+    return this.props.invoices.map(invoice => {
       return (
         <div className="row" key={invoice._id}>
           <div className="col s12 m12 l12">

@@ -2,6 +2,9 @@ import axios from 'axios';
 
 import { FETCH_USER, FETCH_INVOICES, CREATE_INVOICE } from './types';
 
+/*******************************************************************
+ Action Generators for User and Invoice data
+********************************************************************/
 export const fetchUser = () => async dispatch =>
   dispatch({
     type: FETCH_USER,

@@ -1,7 +1,13 @@
+/*******************************************************************
+ Import the React and React-Router-DOM modules
+********************************************************************/
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
-
+/*******************************************************************
+ This Component is displayed if the user navigates to a Route which
+ is not part of the App Router
+********************************************************************/
 export default class NotFound extends Component {
   render() {
     return (

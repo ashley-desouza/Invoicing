@@ -1,7 +1,15 @@
+/*******************************************************************
+ Import the React, React-Router-DOM, React-Redux modules
+********************************************************************/
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 
+/*******************************************************************
+ This Component determines what is displayed in the App Header
+ based on whether the user is logged in or not
+ It will be displayed on every Route
+********************************************************************/
 class Header extends Component {
   renderContent() {
     switch (this.props.user) {
