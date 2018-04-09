@@ -22,7 +22,7 @@ class InvoiceList extends Component {
       return invoiceLineItems.map(({ _id, description, amount }) => {
         return (
           <li key={_id}>
-            <span>Description: {description} - Amount: {amount}</span>
+            <span>Item Description: {description} -  Item Amount: {amount}</span>
           </li>
         );
       });
@@ -44,11 +44,11 @@ class InvoiceList extends Component {
           <div className="col s12 m12 l12">
             <div className="card blue-grey lighten-2">
               <div className="card-content">
-                <span className="card-title">Invoice for {invoice.name}</span>
+                <h3 className="card-title">Invoice for Buyer {invoice.name}</h3>
                 <p className="right">
                   Due Date: {new Date(invoice.dueDate).toLocaleDateString()}
                 </p>
-                <p>Email: {invoice.email}</p>
+                <p>Buyer's Email: {invoice.email}</p>
                 <ol>{this.renderLineItems(invoice.lineItems)}</ol>
                 <p>Invoice Total: ${invoice.totalAmount}</p>
               </div>
