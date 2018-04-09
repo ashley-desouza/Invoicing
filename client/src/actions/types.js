@@ -1,5 +1,0 @@
-export const FETCH_USER = 'FETCH_USER';
-
-export const FETCH_INVOICES = 'FETCH_INVOICES';
-
-export const CREATE_INVOICE = 'CREATE_INVOICE';
