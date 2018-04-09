@@ -1,3 +1,10 @@
 import { combineReducers } from 'redux';
 
-export default combineReducers({});
+import authReducer from './authReducer';
+import invoicesReducer from './invoicesReducer';
+
+export default combineReducers({
+  user: authReducer,
+  invoices: invoicesReducer
+});
+
