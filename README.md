@@ -139,7 +139,7 @@ The following information is available in the Invoice List view -
 
     * As mentioned above, based on my experience I have not found coding exercises an accurate way to assess someone.
     * We have had candidates who do really well on the coding challenge but struggle during the in-person interview and it is entirely possible that we have missed out on really good candidates who did not do well on the coding challenge
-    * Based on my experience, I would give the coding exercise step a 3.
+    * Based on my experience, I would give the coding exercise as a step in the interview process a 3.
 
 5. What would you change in the exercise and/or process?
     * As mentioned before, I think this was one of the more enjoyable coding exercises I have had to do. I think it was fair. Nothing really to change.
