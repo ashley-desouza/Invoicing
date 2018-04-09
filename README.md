@@ -18,6 +18,8 @@ The following information is available in the Invoice List view -
 
 1. The Invoicing Application is available for use at [InvoiceApp](https://secret-shore-94449.herokuapp.com/)
 
+**NOTE**: I will be deleting the database and all the data after 15 days.
+
 2. Users will need to login to the Application in order to create invoices and view their list of invoices
 
 3. Login using github credentials. Asking users to do this is a fair assumption as this exercise is required to be tracked and recorded in github.
