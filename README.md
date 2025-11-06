@@ -14,12 +14,6 @@ The following information is available in the Invoice List view -
 4.  The Due Date and
 5.  The Total Invoice Amount
 
-## Accessing the Application
-
-1.  The Invoicy Application is available for use at [Invoicy](https://secret-shore-94449.herokuapp.com/)
-
-2.  Users can login to the Application using their github credentials in order to create invoices and view their list of invoices.
-
 ## Directory Structure
 
 1.  The Server Side -
